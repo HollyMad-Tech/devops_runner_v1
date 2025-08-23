@@ -1,0 +1,3 @@
+﻿{"claim":"ping plan path","ttft_ms":220,"latency_ms":800,"passed":true}
+{"claim":"exec happy path","ttft_ms":260,"latency_ms":950,"passed":true}
+{"claim":"bad tool call","ttft_ms":310,"latency_ms":1200,"passed":false}
