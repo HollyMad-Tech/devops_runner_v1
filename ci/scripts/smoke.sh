@@ -8,9 +8,9 @@ echo "==> E2E smokes (STRICT=${STRICT})" | tee "${LOG_DIR}/smokes.out"
 function try_python_module() {
   local mod="$1"
   python - <<PY
-import importlib,sys
+import importlib, sys; import importlib.util as importlib_util
 mod="${mod}"
-spec=importlib.util.find_spec(mod)
+spec=importlib_util.find_spec(mod)
 sys.exit(0 if spec else 2)
 PY
 }
