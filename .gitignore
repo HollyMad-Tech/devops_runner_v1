@@ -1,9 +1,17 @@
-﻿/audit/
-/artifacts/
-/memory/
-/out/
-/tmp/
-/workspace/
-/__pycache__/
-/*.log
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
 .venv/
+.env
+.env.*
+
+# Local artifacts / logs
+devops_runner/audit/
+metrics/*.jsonl
+metrics/*.csv
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db
