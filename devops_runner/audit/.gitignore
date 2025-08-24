@@ -1,0 +1,9 @@
+﻿# Ignore generated audit data here
+[0-9]*/
+*Z_*/
+selfconsistency_*/
+
+# Keep package code and this file
+!__init__.py
+!writer.py
+!.gitignore
