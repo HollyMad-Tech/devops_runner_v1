@@ -1,0 +1,26 @@
+﻿{
+  "rb": {
+    "conflicting_claims": 0.20,
+    "number_heavy": 0.15,
+    "units_precision": 0.10,
+    "tech_trend": 0.15,
+    "market_trend": 0.10,
+    "old_new_mix": 0.10,
+    "low_signal_withhold": 0.15,
+    "fallback_withhold": 0.05
+  },
+  "devops": {
+    "small_refactor": 0.20,
+    "add_test": 0.15,
+    "fix_failing_test": 0.25,
+    "win_linux_paths": 0.15,
+    "timeout_limits": 0.25
+  },
+  "thresholds": {
+    "plan_adherence": 0.90,
+    "tool_success": 0.95,
+    "ttft_ms": 300,
+    "p95_dry_ms": 2000,
+    "p95_run_ms": 6000
+  }
+}

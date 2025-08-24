@@ -1,0 +1,15 @@
+﻿{"id":"RB-001","category":"conflicting_claims","depth":"deep","query":"Semaglutide and cardiovascular mortality: contrast SELECT RCT vs recent meta-analyses; reconcile discrepancies; units explicit."}
+{"id":"RB-002","category":"number_heavy","depth":"standard","query":"EU inflation Q/Q and Y/Y 2023–2025: table with units and base; note revisions."}
+{"id":"RB-003","category":"low_signal_withhold","depth":"short","query":"Rumors about unreleased Apple headset v2 specs — summarize only if credible; otherwise withhold and explain."}
+{"id":"RB-004","category":"tech_trend","depth":"deep","query":"RISC-V adoption in datacenter 2023–2025: vendors, perf/W trends, toolchain maturity, risks."}
+{"id":"RB-005","category":"market_trend","depth":"standard","query":"HDD vs SSD price/GB trend 2020–2025; forecast caveats; regional differences."}
+{"id":"RB-006","category":"units_precision","depth":"standard","query":"mRNA dose stability curves: temperatures (°C) and time (h) with CI; cite data."}
+{"id":"RB-007","category":"conflicting_claims","depth":"deep","query":"Did LLM context window scaling laws hold beyond 1M tokens? Contrast papers; list breakpoints."}
+{"id":"RB-008","category":"old_new_mix","depth":"standard","query":"Quantum dot displays: 2013 milestones vs 2024–2025 materials advances; health/regulatory notes."}
+{"id":"RB-009","category":"low_signal_withhold","depth":"short","query":"Claim: room-temp superconductivity achieved in commodity copper. Validate or withhold."}
+{"id":"RB-010","category":"number_heavy","depth":"standard","query":"Global EV sales 2022–2025 H1: YoY%, market share by region; units consistent."}
+{"id":"RB-011","category":"tech_trend","depth":"deep","query":"WASM on server: cold-start and TTFT vs containers; ecosystems; security risks; recs."}
+{"id":"RB-012","category":"units_precision","depth":"standard","query":"Battery energy density roadmap: Wh/kg vs Wh/L for Li-ion, Li-metal, solid-state; credible ranges + dates."}
+{"id":"RB-013","category":"conflicting_claims","depth":"deep","query":"Do code-LLMs reduce defect rates in production? Compare vendor studies vs independent audits."}
+{"id":"RB-014","category":"fallback_withhold","depth":"short","query":"Breaking rumor: major exchange insolvent. Only report with on-record filings; else withhold and explain."}
+{"id":"RB-015","category":"old_new_mix","depth":"standard","query":"IPv6 deployment: 2015 baseline vs 2025 status; operator case studies + barriers."}

@@ -1,0 +1,8 @@
+repos:
+- repo: local
+  hooks:
+  - id: forbid-utf8-bom
+    name: forbid-utf8-bom
+    entry: python -c "import sys, pathlib; bad=[str(p) for p in pathlib.Path('.').rglob('*') if p.is_file() and p.suffix.lower() in {'.py','.toml','.ini','.cfg','.txt'} and b'\xef\xbb\xbf' in p.read_bytes()]; print('BOM in:', *bad) or sys.exit(1) if bad else sys.exit(0)"
+    language: system
+    files: '\.(py|toml|ini|cfg|txt)$'
