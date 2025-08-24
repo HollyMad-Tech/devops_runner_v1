@@ -5,11 +5,15 @@ on:
 jobs:
   run-canaries:
     runs-on: windows-latest
+    strategy:
+      matrix:
+        python-version: [ "3.12", "3.13" ]
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.13'
+          python-version: ${{ matrix.python-version }}
+          cache: pip
       - name: Run canaries
         shell: pwsh
-        run: powershell -ExecutionPolicy Bypass -File .\scripts\run_canaries.ps1 -Ci
+        run: .\scripts\run_canaries.ps1 -Ci
