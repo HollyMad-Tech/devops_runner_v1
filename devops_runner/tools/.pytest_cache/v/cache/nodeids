@@ -1,0 +1,3 @@
+[
+  "tests/contracts/test_audit_schema.py::test_audit_schema_minimal"
+]
