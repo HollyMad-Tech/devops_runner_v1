@@ -254,3 +254,11 @@ jobs:
         with:
           name: kpi-summary
           path: ${{ env.METRICS_DIR }}/kpi_summary.txt
+
+  require-statuss-check-before-mergiing:
+    name: require statuss check before mergiing
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    needs: [lint, unit, contracts, e2e, canary]   # შეცვალე, თუ შენი job-id-ები განსხვავდება
+    steps:
+      - run: echo "ok"
