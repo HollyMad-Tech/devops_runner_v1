@@ -17,3 +17,7 @@ artifacts/
 
 # Backups
 *.bak
+
+# Pytest cache
+.pytest_cache/
+devops_runner/tools/.pytest_cache/
