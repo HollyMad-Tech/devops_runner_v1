@@ -33,3 +33,20 @@ Set `CI_STRICT=true` (repo variable/secret) to fail when required resources are 
 
 ### Make failures visible
 Check the CI Artifacts tab for `logs-*`, `audit-bundle`, `incident-bundle`, and `kpi-summary`.
+## Canary suite & KPIs
+
+Structure
+- tests/canary/rb/*.jsonl — ≈15 Research Brief canaries.
+- tests/canary/devops/*.jsonl — ≈10 DevOps canaries.
+- tests/kpi_asserts.py — KPI helpers (Plan-Adherence, Tool-Success, TTFT, p95).
+- configs/canary_map.json — categories, weights, thresholds.
+- metrics/canary_metrics.jsonl — per-run feed.
+
+How to run
+- Optional env: KPI_PLAN_ADHERENCE=0.90 KPI_TOOL_SUCCESS=0.95 KPI_TTFT_MS=300 KPI_P95_DRY_MS=2000 KPI_P95_RUN_MS=6000
+- Run: python -m pytest -q
+
+CI gates
+- Build fails if any KPI assert fails (per-case or aggregate).
+- Keep failures as regression guards.
+- When all green on full set → tag v0.2.0 (pilot-demo ready).

@@ -1,4 +1,4 @@
-﻿#!/usr/bin/env bash
+#!/usr/bin/env bash
 set -euo pipefail
 LOG_DIR="artifacts/logs/canary"
 METRICS_DIR="artifacts/metrics"

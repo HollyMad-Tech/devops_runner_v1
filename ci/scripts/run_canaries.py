@@ -1,4 +1,4 @@
-﻿import argparse, json, sys, time, os
+import argparse, json, sys, time, os
 
 def p95(values):
     if not values:

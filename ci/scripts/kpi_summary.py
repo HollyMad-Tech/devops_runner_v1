@@ -1,4 +1,4 @@
-﻿import argparse, json, os
+import argparse, json, os
 
 def load_jsonl(path):
     out=[]
