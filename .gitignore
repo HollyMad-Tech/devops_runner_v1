@@ -1,0 +1,9 @@
+﻿/audit/
+/artifacts/
+/memory/
+/out/
+/tmp/
+/workspace/
+/__pycache__/
+/*.log
+.venv/
