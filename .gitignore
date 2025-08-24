@@ -1,17 +1,19 @@
-# Python
+﻿# Python bytecode
 __pycache__/
 *.py[cod]
 *.pyo
-.venv/
-.env
-.env.*
 
-# Local artifacts / logs
-devops_runner/audit/
+# Metrics outputs
 metrics/*.jsonl
 metrics/*.csv
-*.log
 
-# OS junk
-.DS_Store
-Thumbs.db
+# Audit run outputs (timestamped/self-consistency dirs)
+devops_runner/audit/[0-9]*/
+devops_runner/audit/*Z_*/
+devops_runner/audit/selfconsistency_*/
+
+# Local run artifacts
+artifacts/
+
+# Backups
+*.bak
