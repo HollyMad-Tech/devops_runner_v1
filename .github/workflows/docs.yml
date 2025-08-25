@@ -1,0 +1,22 @@
+name: Docs Lint & Link Check
+on:
+  pull_request:
+    paths:
+      - "docs/**"
+      - "README.md"
+      - ".github/workflows/docs.yml"
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Markdown Lint
+        uses: nosborn/github-action-markdown-cli@v3
+        with: { files: docs }
+      - name: Link Check
+        uses: lycheeverse/lychee-action@v2
+        with: { args: --verbose --no-progress "docs/**/*.md" }
+        env: { GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}} }
+      - name: Upload Assets
+        uses: actions/upload-artifact@v4
+        with: { name: docs-assets, path: assets/* }

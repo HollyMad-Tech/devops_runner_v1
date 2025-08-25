@@ -1,0 +1,27 @@
+services:
+  sena:
+    build: .
+    image: sena/pilot:0.2.0
+    container_name: sena_pilot
+    env_file: .env
+    ports:
+      - "${PORT:-8765}:8765"
+    environment:
+      - BUILD_MODE=${BUILD_MODE:-PILOT}
+      - WORKSPACE=/app/workspace
+      - LOG_DIR=/app/logs
+      - LOG_FILE=${LOG_FILE:-app.log}
+      - LOG_MAX=${LOG_MAX:-10MB}
+      - LOG_BACKUPS=${LOG_BACKUPS:-5}
+      - METRICS_JSONL=/app/workspace/metrics/metrics.jsonl
+      - EXPORTS_DIR=/app/workspace/exports
+      - AUDIT_DIR=/app/workspace/audit
+    volumes:
+      - ./workspace:/app/workspace
+      - ./logs:/app/logs
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8765/health"]
+      interval: 10s
+      timeout: 3s
+      retries: 12
+    restart: unless-stopped
